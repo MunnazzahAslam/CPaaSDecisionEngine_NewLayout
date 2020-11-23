@@ -1,0 +1,87 @@
+.home_page{
+    min-height: 100vh;
+    padding: 20px;
+    background: #fff;
+    color:#15202B;
+}
+
+.home_page h2{
+    text-align: center;
+    font-size: 2em;
+    margin: 15px 0px;
+    padding: 0.2em;
+    font-weight: 700;
+}
+
+.home_page a{
+    color:#15202B;
+    font-size: 15px;
+    font-weight: 500;
+}
+.center{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.grid-item {
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+    flex-grow: 1;
+    width: 20%;
+    height: 100px;
+}
+.image{
+    margin-left: 20px;
+    float: center;
+    width:  280px;
+    height: 258px;
+    object-fit: contain;
+    padding: 15px;
+  }
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+  @media (max-width: 800px) {
+    .grid-container {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .grid-item {
+        margin: 0 auto;
+        margin-top: 10px;
+        width:100%;
+    }
+    .image{
+        padding: 0px;
+        margin-top: -65px;
+        margin-bottom: -65px;
+        width:100%;
+    }
+  }
+  @media (max-width: 600px) {
+    .grid-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .grid-item {
+          margin: 0 auto;
+          margin-top: 10px;
+          width:100%;
+    }
+  .image{
+    padding: 0px;
+    margin-top: -50px;
+    margin-bottom: -50px;
+    width:100%;
+ }
+}
+ 
+  

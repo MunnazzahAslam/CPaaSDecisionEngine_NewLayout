@@ -1,0 +1,9 @@
+.main{
+    min-height: calc(100vh - 00px);
+    background: #15202B;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color:#fff;
+}

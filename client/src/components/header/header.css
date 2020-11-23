@@ -1,0 +1,76 @@
+header{
+    background: #fff;
+    display: flex;
+    justify-content:space-between;
+    margin: 8px;
+    padding: 12px;
+    height:80px;
+}
+.logo{
+    margin-left: 12px;
+    justify-self:flex-start;
+    cursor:pointer;
+}
+header a{
+    color:#15202B;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+header ul li{
+    display: inline-block;
+    padding: 10px;
+    opacity: 0.8;
+}
+header ul li:hover{
+    opacity: 1;
+}
+header ul li img{
+    border: none;
+    width: 30px;
+    height: 30px;
+    transform: translateY(10px);
+    border-radius: 50%;
+}
+
+/* --------- Dropdown ---------- */
+.drop-nav{
+    position: relative;
+    padding: 10px 30px;
+    margin-right: 2.5em;
+    border: none;
+}
+.drop-nav a{
+    text-transform: capitalize;
+    overflow: hidden;
+    color: #3D4F58 !important;
+}
+.drop-nav .dropdown{
+    position: absolute;
+    background: #f4f5f7;
+    width: 100%;
+    width: calc(100% + 30px);
+    border-radius: 8px;
+    top: 55px;
+    display: none;
+    margin-right: 2rem;
+}
+.drop-nav .dropdown li{
+    display: block;
+}
+.drop-nav:hover .dropdown{
+    border-radius: 8px;
+    display: block;
+}
+@media (max-width: 900px) {
+    .logo{
+        margin-left: -10px;
+        font-size: 15px;
+    }
+    header ul li{
+        margin: 4px;
+        display: inline-block;
+        font-size: 14px;
+        padding: 2px;
+        opacity: 0.8;
+    }
+}
