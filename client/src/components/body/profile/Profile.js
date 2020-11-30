@@ -112,111 +112,66 @@ function Profile() {
         if(name || avatar) updateInfor()
         if(password) updatePassword()
     }
-
     return (
-        <div className="main">
-        
-        <div className="profile_page reg">
+        <>
+        <h2 style={{textAlign:'center'}}>Hello user, update your Profile</h2> 
+            <br/>
+        <div className="main">   
+        <div className="profile_page">
         <div>
             {err && showErrMsg(err)}
             {success && showSuccessMsg(success)}
             {loading && <h3>Loading.....</h3>}
         </div>
-            <div className="col-left">
-                <h2 style={{color:'#3D4F58'}}>{isAdmin ? "Admin Profile": "Update your Profile"}</h2>
-
-                <div className="avatar">
+         <div className="avatar">
                     <img src={avatar ? avatar : user.avatar} alt=""/>
                     <span>
                         <i className="fas fa-camera"></i>
                         <p>Change</p>
-                        <input type="file" name="file" id="file_up" onChange={changeAvatar} />
+                        <input className="input" type="file" name="file" id="file_up" onChange={changeAvatar} />
                     </span>
                 </div>
-
+                <br />
+            <div className="col-left">
+               {/* <h2 style={{color:'#3D4F58'}}>{isAdmin ? "Admin Profile": "Update your Profile"}</h2> */}
                 <div className="form-group">
-                    <label htmlFor="name">Name</label>
-                    <input type="text" name="name" id="name" defaultValue={user.name}
+                    <label htmlFor="name">First Name</label>
+                    <input style={{marginLeft:'20px'}} className="input" type="text" name="name" id="name" defaultValue={user.name}
                     placeholder="Your name" onChange={handleChange} />
-                </div>
-
+                    <label htmlFor="name">Last Name</label>
+                    <input style={{marginLeft:'40px'}} className="input" type="text" name="name" id="name" defaultValue={user.name}
+                    placeholder="Your name" onChange={handleChange} />
+                    </div>
                 <div className="form-group">
-                    <label htmlFor="email">Email</label>
-                    <input type="email" name="email" id="email" defaultValue={user.email}
+                    <label htmlFor="email" className="right">Email</label>
+                    <input style={{flexGrow:'6',marginLeft:'43px',marginBottom:'16px'}}  className="input" type="email" name="email" id="email" defaultValue={user.email}
                     placeholder="Your email address" disabled />
                 </div>
-
                 <div className="form-group">
                     <label htmlFor="password">New Password</label>
-                    <input type="password" name="password" id="password"
+                    <input style={{marginLeft:'-8px'}} className="input" type="password" name="password" id="password"
                     placeholder="Your password" value={password} onChange={handleChange} />
-                </div>
-
-                <div className="form-group">
-                    <label htmlFor="cf_password">Confirm New Password</label>
-                    <input type="password" name="cf_password" id="cf_password"
+                  <label htmlFor="cf_password" className="right">Confirm New Password</label>
+                    <input style={{marginLeft:'-50px'}} className="input" type="password" name="cf_password" id="cf_password"
                     placeholder="Confirm password" value={cf_password} onChange={handleChange} />
                 </div>
 
-                <div>
+                <div className="form-group">
                     <label htmlFor="company">Company</label>
-                    <input type="company" placeholder="Enter your Company" id="company"
+                    <input style={{marginLeft:'7px'}} className="input" type="company" placeholder="Enter your Company" id="company"
                     value={company} name="company" onChange={handleChange} />
-                </div>
-
-                <div>
-                    <label htmlFor="phoneno">Phone Number</label>
-                    <input type="phoneno" placeholder="Enter your Phone number" id="phoneno"
+                   <label htmlFor="phoneno">Phone Number</label>
+                    <input className="input" type="phoneno" placeholder="Enter your Phone number" id="phoneno"
                     value={phoneno} name="phoneno" onChange={handleChange} />
                 </div>
 
                 <button className="btn bob-on-hover" disabled={loading} onClick={handleUpdate}>Update</button>
             </div>
-{/*
-            <div className="col-right">
-                <h2>{isAdmin ? "Users" : "My Orders"}</h2>
-
-                <div style={{overflowX: "auto"}}>
-                    <table className="customers">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Admin</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                users.map(user => (
-                                    <tr key={user._id}>
-                                        <td>{user._id}</td>
-                                        <td>{user.name}</td>
-                                        <td>{user.email}</td>
-                                        <td>
-                                            {
-                                                user.role === 1
-                                                ? <i className="fas fa-check" title="Admin"></i>
-                                                : <i className="fas fa-times" title="User"></i>
-                                            }
-                                        </td>
-                                        <td>
-                                            <Link to={`/edit_user/${user._id}`}>
-                                                <i className="fas fa-edit" title="Edit"></i>
-                                            </Link>
-                                            <i className="fas fa-trash-alt" title="Remove"
-                                            onClick={() => handleDelete(user._id)} ></i>
-                                        </td>
-                                    </tr>
-                                ))
-                            }
-                        </tbody>
-                    </table>
-                </div>
-            </div>*/}
+            </div>
+            <div className="align-right">
+            </div>
         </div>
-        </div>
+        </>
     )
 }
 

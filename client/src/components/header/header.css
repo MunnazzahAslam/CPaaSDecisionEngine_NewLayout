@@ -7,13 +7,14 @@ header{
     height:80px;
 }
 .logo{
-    margin-left: 12px;
+    height: 40px;
+    width:200px;
     justify-self:flex-start;
     cursor:pointer;
 }
 header a{
     color:#15202B;
-    font-size: 13px;
+    font-size: 16px;
     letter-spacing: 1px;
 }
 header ul li{
@@ -22,7 +23,7 @@ header ul li{
     opacity: 0.8;
 }
 header ul li:hover{
-    opacity: 1;
+    opacity: 1.1;
 }
 header ul li img{
     border: none;

@@ -24,11 +24,11 @@ export class VendorUseCaseInfo extends Component {
     render() {
         const usecases = this.state.usecases.map(usecase => (
             <div key={usecase.TransformX_Usecase_Id}>
-              <h5> {usecase.TransformX_Usecase_Name}</h5>
+              <h3> {usecase.TransformX_Usecase_Name}</h3>
               <br/>
-              <h6>Industry: {usecase.TransformX_Usecase_Industry}</h6>
-              <h6>Cateogry: {usecase.TransformX_Usecase_Category}</h6>
-              <h6>Description: {usecase.TransformX_Usecase_Description}</h6>
+              <p>Industry: {usecase.TransformX_Usecase_Industry}</p>
+              <p>Cateogry: {usecase.TransformX_Usecase_Category}</p>
+              <p>Description: {usecase.TransformX_Usecase_Description}</p>
             </div>
           ));
         return (

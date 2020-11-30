@@ -8,8 +8,11 @@ import ForgotPass from '../body/auth/ForgotPassword'
 import ResetPass from '../body/auth/ResetPassword'
 import Profile from '../body/profile/Profile'
 import EditUser from '../body/profile/EditUser'
-import VendorAPIInfo from '../body/Vendor/VendorAPIInfo'
+import APIs from '../body/APIs/APIs'
+import Usecases from '../body/Usecases/Usecases'
+import SuccessStories from '../body/SuccessStories/SuccessStories'
 import Vendor from '../body/Vendor/Vendor'
+import Vendors from '../body/Vendors/Vendors'
 import Home from '../body/home/Home'
 
 import {useSelector} from 'react-redux'
@@ -22,10 +25,12 @@ function Body() {
             <Switch>
                 <Route path="/" component={Home} exact />
                 <Route path="/vonage" component={Vendor} exact />
-                <Route path="/vonageapi" component={VendorAPIInfo} exact />
+                <Route path="/apis" component={APIs} exact />
+                <Route path="/usecases" component={Usecases} exact />
+                <Route path="/userstories" component={SuccessStories} exact />
                 <Route path="/login" component={isLogged ? NotFound : Login} exact />
                 <Route path="/register" component={isLogged ? NotFound : Register} exact />
-
+                <Route path="/vendors" component={Vendors} exact />
                 <Route path="/forgot_password" component={isLogged ? NotFound : ForgotPass} exact />
                 <Route path="/user/reset/:token" component={isLogged ? NotFound : ResetPass} exact />
 

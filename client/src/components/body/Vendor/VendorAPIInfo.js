@@ -25,13 +25,13 @@ export class VendorAPIInfo extends Component {
     render() {
         const apis = this.state.apis.map(api => (
             <div key={api.TransformX_API_Id}>
-                <h5> {api.Vendor_API_Name}</h5>
+                <h3> {api.Vendor_API_Name}</h3>
                 <br />
-                <h6>Description: {api.Vendor_API_Description}</h6>
-                <h6>Cateogry: {api.TransformX_API_Category1}</h6>
-                <h6>Description:<br /> {api.TransformX_API_Feature_Description_1}</h6>
-                <h6> {api.TransformX_API_Feature_Description_2}</h6>
-                <h6> {api.TransformX_API_Feature_Description_3}</h6>
+                <p>Description: {api.Vendor_API_Description}</p>
+                <p>Cateogry: {api.TransformX_API_Category1}</p>
+                <p>Description:<br /> {api.TransformX_API_Feature_Description_1}</p>
+                <p> {api.TransformX_API_Feature_Description_2}</p>
+                <p> {api.TransformX_API_Feature_Description_3}</p>
             </div>
         ));
         return (

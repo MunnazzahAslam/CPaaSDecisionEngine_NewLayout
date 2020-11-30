@@ -10,16 +10,8 @@ import kaleyra from './Images/kaleyra.png';
 import soprano from './Images/soprano.png';
 import telesign from './Images/telesign.png';
 import zenvia from './Images/zenvia.png';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
 
-const useStyles = makeStyles((theme) => ({
-    root1: {
-       
-    },
-}));
 function Home() {
-    const classes = useStyles();
     return (
         <div className="home_page">
             <h2>Top 10 CPaaS Vendors</h2>

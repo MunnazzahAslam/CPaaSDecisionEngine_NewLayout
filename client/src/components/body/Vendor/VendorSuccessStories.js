@@ -25,12 +25,12 @@ export class VendorSuccessStories extends Component {
     render() {
         const successstories = this.state.successstories.map(successstory => (
             <div key={successstory.TransformX_Success_Story_Id}>
-              <h5> {successstory.Vendor_Success_Story_Client_Name}</h5>
+              <h3> {successstory.Vendor_Success_Story_Client_Name}</h3>
               <br/>
-              <h6>Client: {successstory.Vendor_Success_Story_Client_Description}</h6>
-              <h6>Challenge: {successstory.TransformX_Success_Story_Challenge}</h6>
-              <h6>Description: {successstory.TransformX_Success_Story_Description}</h6>
-              <h6>Result: {successstory.TransformX_Success_Story_Result}</h6>
+              <p>Client: {successstory.Vendor_Success_Story_Client_Description}</p>
+              <p>Challenge: {successstory.TransformX_Success_Story_Challenge}</p>
+              <p>Description: {successstory.TransformX_Success_Story_Description}</p>
+              <p>Result: {successstory.TransformX_Success_Story_Result}</p>
             </div>
           ));
         return (
@@ -42,8 +42,7 @@ export class VendorSuccessStories extends Component {
                   {successstories[2]}
                   <br />
                   {successstories[3]}
-                  <br />
-                  {successstories[4]}
+             
             </div>
         )
     }

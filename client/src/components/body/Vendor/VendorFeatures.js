@@ -25,21 +25,21 @@ export class VendorFeature extends Component {
     render() {
         const vendors = this.state.vendors.map(vendor => (
             <div key={vendor.TransformX_Vendor_Id}>
-                <h6 style={{ textAlign: 'justify' }}>Support Services:<br /><br />{vendor.TransformX_Vendor_Support_Services}</h6>
+                <p style={{ textAlign: 'justify' }}>Support Services:<br /><br />{vendor.TransformX_Vendor_Support_Services}</p>
                 <br />
-                <h6 style={{ textAlign: 'justify' }}>Specialities:<br /><br />{vendor.LinkedIn_Vendor_Specialties}</h6>
+                <p style={{ textAlign: 'justify' }}>Specialities:<br /><br />{vendor.LinkedIn_Vendor_Specialties}</p>
                 <br />
-                <h6 style={{ textAlign: 'justify' }}>Sell Point:<br /><br />{vendor.TransformX_Vendor_Unique_Sell_Point}</h6>
+                <p style={{ textAlign: 'justify' }}>Sell Point:<br /><br />{vendor.TransformX_Vendor_Unique_Sell_Point}</p>
                 <br />
-                <h6>Company Size: {vendor.LinkedIn_Vendor_Company_Size}</h6>
+                <p>Company Size: {vendor.LinkedIn_Vendor_Company_Size}</p>
                 <br />
-                <h6>Founders: {vendor.Crunchbase_Vendor_Founders}</h6>
+                <p>Founders: {vendor.Crunchbase_Vendor_Founders}</p>
                 <br />
-                <h6>Headquarters: {vendor.LinkedIn_Vendor_Headquarters}</h6>
+                <p>Headquarters: {vendor.LinkedIn_Vendor_Headquarters}</p>
                 <br />
-                <h6>Contact: {vendor.TransformX_Vendor_Phone_Number}</h6>
+                <p>Contact: {vendor.TransformX_Vendor_Phone_Number}</p>
                 <br />
-                <h6>Email: {vendor.Crunchbase_Vendor_Contact_Email}</h6>
+                <p>Email: {vendor.Crunchbase_Vendor_Contact_Email}</p>
             </div>
         ));
         return (

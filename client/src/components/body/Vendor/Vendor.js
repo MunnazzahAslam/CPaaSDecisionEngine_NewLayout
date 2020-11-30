@@ -2,16 +2,15 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+//import Button from '@material-ui/core/Button';
+//import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import vonagebanner from './vonagebanner.png';
 import VendorHeaderInfo from './VendorHeaderInfo';
 import VendorFeature from './VendorFeatures';
 import VendorRating from './VendorRating';
-import vonage from '../home/Images/vonage.png';
+//import vonage from '../home/Images/vonage.png';
 import VendorUseCaseInfo from './VendorUseCaseInfo';
 import VendorAPIInfo from './VendorAPIInfo';
 import VendorSuccessStories from './VendorSuccessStories';
@@ -31,8 +30,9 @@ const useStyles = makeStyles((theme) => ({
     },
     root1: {
         //width:'70%',
-        height: '300px',
+        height: '320px',
         margin: '18px',
+        marginTop:'-22px',
         background: '#fff',
         borderRadius: '10px'
     },
@@ -50,6 +50,13 @@ const useStyles = makeStyles((theme) => ({
         cursor: 'pointer',
     },
     root2: {
+        //width:'30%',
+        height: '320px',
+        margin: '18px',
+        background: '#fff',
+        borderRadius: '10px'
+    },
+    root21: {
         //width:'30%',
         height: '700px',
         margin: '18px',
@@ -73,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
     },
     root5: {
         //width:'70%',
-        height: '400px',
+        height: '420px',
         margin: '18px',
         //marginTop:'-75px',
         background: '#fff',
@@ -120,25 +127,19 @@ export default function SimpleCard() {
                 </Grid>
 
                 <Grid item xs={12} sm={9}>
-                    <Card className={classes.root1}>
+                    <Card className={classes.root2}>
                         <CardContent className={classes.title} color="textSecondary" >
                             {/*  <div className={classes.imgContainer}><img alt="logo" className={classes.imagelogo} src={vonage} /></div> */}
                             <VendorHeaderInfo />
                         </CardContent>
-                        <CardActions>
-                            <Button size="small" href="/vonage" >Show More</Button>
-                        </CardActions>
                     </Card>
                 </Grid>
 
                 <Grid item xs={12} sm={3}>
-                    <Card className={classes.root2}>
+                    <Card className={classes.root21}>
                         <CardContent className={classes.title} color="textSecondary" >
                             <VendorFeature />
                         </CardContent>
-                        <CardActions>
-                            <Button size="small">Show More</Button>
-                        </CardActions>
                     </Card>
                 </Grid>
                 <Grid item xs={12} sm={3}>
@@ -148,9 +149,6 @@ export default function SimpleCard() {
                             <br />
                             <VendorRating />
                         </CardContent>
-                        <CardActions>
-                            <Button size="small">Show More</Button>
-                        </CardActions>
                     </Card>
                 </Grid>
                 <Grid item xs={12} sm={3}>
@@ -160,9 +158,6 @@ export default function SimpleCard() {
                             <br />
                             <VendorRating />
                         </CardContent>
-                        <CardActions>
-                            <Button size="small">Show More</Button>
-                        </CardActions>
                     </Card>
                 </Grid>
                 <Grid item xs={12} sm={3}>
@@ -172,9 +167,6 @@ export default function SimpleCard() {
                             <br />
                             <VendorRating />
                         </CardContent>
-                        <CardActions>
-                            <Button size="small" >Show More</Button>
-                        </CardActions>
                     </Card>
                 </Grid>
 
@@ -182,7 +174,7 @@ export default function SimpleCard() {
                     <Card className={classes.root1}>
                         <CardContent>
                             <div style={{ borderRadius: '10px', margin: '8px' }}>
-                                <ReactPlayer height='250px' width='480px' url='https://www.youtube.com/watch?v=rqRPL3IDnb8' />
+                                <ReactPlayer height='250px' width='480px' url='https://www.youtube.com/watch?v=7x7xdChQAIg' />
                             </div>
                         </CardContent>
                     </Card>
@@ -213,9 +205,6 @@ export default function SimpleCard() {
                         <CardContent className={classes.title} color="textSecondary" >
                             <VendorUseCaseInfo />
                         </CardContent>
-                        <CardActions>
-                            <Button size="small" >Show More</Button>
-                        </CardActions>
                     </Card>
                 </Grid>
 
@@ -224,9 +213,6 @@ export default function SimpleCard() {
                         <CardContent className={classes.title} color="textSecondary" >
                             <VendorSuccessStories />
                         </CardContent>
-                        <CardActions>
-                            <Button size="small" >Show More</Button>
-                        </CardActions>
                     </Card>
                 </Grid>
 
@@ -235,15 +221,11 @@ export default function SimpleCard() {
                         <CardContent className={classes.title} color="textSecondary">
                             <VendorAPIInfo />
                         </CardContent>
-                        <CardActions>
-                            <Button size="small" >Show More</Button>
-                        </CardActions>
                     </Card>
                 </Grid>
                 <Grid item xs={12} sm={4}>
                 </Grid>
             </Grid>
-
         </div>
     );
 } 
